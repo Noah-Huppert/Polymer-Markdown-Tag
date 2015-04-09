@@ -4,18 +4,17 @@ module.exports = function(grunt) {
         'connect': {
             demo: {
                 options: {
-                    open: true,
                     keepalive: true
                 }
             }
         },
         'gh-pages': {
             options: {
-                clone: 'bower_components/my-repo'
+                clone: 'bower_components/polymer-markdown-tag'
             },
             src: [
                 'bower_components/**/*',
-                '!bower_components/my-repo/**/*',
+                '!bower_components/polymer-markdown-tag/**/*',
                 'demo/*', 'src/*', 'index.html'
             ]
         },
@@ -28,14 +27,26 @@ module.exports = function(grunt) {
                     to: '..'
                 }]
             }
+        },
+        'browserify': {
+          scripts: {
+            files: [{
+              expand: true,
+              cwd: "src",
+              src: ["**.js"],
+              dest: "dist",
+              ext: ".js"
+            }]
+          }
         }
     });
 
     grunt.loadNpmTasks('grunt-contrib-connect');
     grunt.loadNpmTasks('grunt-gh-pages');
     grunt.loadNpmTasks('grunt-text-replace');
+    grunt.loadNpmTasks("grunt-browserify");
 
-    grunt.registerTask('build',  ['replace']);
+    grunt.registerTask('build',  ['browserify:scripts', 'replace']);
     grunt.registerTask('deploy', ['gh-pages']);
     grunt.registerTask('server', ['connect']);
 
