@@ -2,18 +2,39 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>&lt;my-repo&gt;</title>
+    <title>&lt;polymer-markdown-tag&gt;</title>
 
     <!-- Importing Web Component's Polyfill -->
-    <script src="bower_components/platform/platform.js"></script>
+    <script src="bower_components/webcomponentsjs/webcomponents.min.js"></script>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/styles/default.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/highlight.min.js"></script>
 
     <!-- Importing Custom Elements -->
-    <link rel="import" href="src/my-element.html">
+    <link rel="import" href="bower_components/paper-input/paper-input-decorator.html">
+    <link rel="import" href="bower_components/paper-input/paper-autogrow-textarea.html">
+    <link rel="import" href="src/polymer-markdown-tag.html">
+
+    <style type="text/css">
+      #input{
+        max-width: 400px;
+        min-height: 100px;
+      }
+    </style>
 </head>
 <body>
 
-    <!-- Using Custom Elements -->
-    <my-element></my-element>
+    <template id="template" is="auto-binding">
+    <label>Input:</label>
+      <paper-input-decorator id="input">
+        <paper-autogrow-textarea>
+          <textarea value="{{RawMarkdown}}"></textarea>
+        </paper-autogrow-textarea>
+      </paper-input-decorator>
+
+      
+    <label>Output:</label>
+      <mark-down id="output" src="{{RawMarkdown}}"></mark-down>
+    </template>
 
 </body>
 </html>
