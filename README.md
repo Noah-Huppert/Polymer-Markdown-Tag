@@ -1,6 +1,3 @@
-#TODO
-Use [Marked](https://github.com/chjj/marked) to parse content
-
 # &lt;mark-down&gt;
 
 > A bare minimum custom element starter-kit using [Polymer](http://www.polymer-project.org/).
@@ -49,19 +46,18 @@ Or [download as ZIP](https://github.com/Noah-Huppert/polymer-markdown-tag/archiv
     ```
 
 ## Options
-None
+Attribute     | Options     | Default      | Description
+---           | ---         | ---          | ---
+`src`         | *string*    | `""`         | The raw markdown to parse.
 
 ## Methods
 
 Method        | Parameters   | Returns     | Description
 ---           | ---          | ---         | ---
-`unicorn()`   | None.        | Nothing.    | Magic stuff appears.
+`update()`    | None.        | Nothing.    | Compiles and displays markdown.
 
 ## Events
-
-Event         | Description
----           | ---
-`onsomething` | Triggers when something happens.
+None
 
 ## Development
 

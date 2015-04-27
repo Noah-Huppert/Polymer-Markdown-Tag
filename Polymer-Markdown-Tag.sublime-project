@@ -1,0 +1,22 @@
+{
+	"folders":
+	[
+		{
+			"file_exclude_patterns":
+			[
+			],
+			"folder_exclude_patterns":
+			[
+				"node_modules/"
+			],
+			"path": "."
+		}
+	],
+	"build_systems":
+	[
+		{
+			"name": "Grunt",
+			"shell_cmd": "grunt build"
+		}
+	]
+}
