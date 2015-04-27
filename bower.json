@@ -1,6 +1,6 @@
 {
   "name": "polymer-markdown-tag",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Polymer element for displaying markdown",
   "license": "MIT",
   "main": "dist/polymer-markdown-tag.html",
