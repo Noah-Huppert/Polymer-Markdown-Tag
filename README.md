@@ -8,7 +8,7 @@
 
 ## Demo
 
-[Check it live!](http://Noah-Huppert.github.io/polymer-markdown-tag)
+[Check it live!](http://Noah-Huppert.github.io/Polymer-Markdown-Tag)
 
 ## Install
 
