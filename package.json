@@ -1,6 +1,6 @@
 {
   "name": "polymer-markdown-tag",
-  "version": "0.0.1",
+  "version": "2.0.1",
   "description": "Polymer element for displaying Github style markdown",
   "main": "src/polymer-markdown-tag.js",
   "scripts": {
