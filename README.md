@@ -3,6 +3,8 @@ Due to an error with a dependency in NPM's [Marky-Markdown](https://github.com/n
 
 An issue has been submited about this. Track it [here](https://github.com/npm/marky-markdown/issues/46)
 
+![Codeship Status](https://codeship.com/projects/YOUR_PROJECT_UUID/status?branch=v2)
+
 #Polymer-Markdown-Tag
 Polymer element for displaying Github style markdown
 
