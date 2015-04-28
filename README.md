@@ -1,110 +1,90 @@
-# &lt;mark-down&gt;
+#Currently Not Working
+Due to an error with a dependency in NPM's [Marky-Markdown](https://github.com/npm/marky-markdown) the code can not be compiled.  
 
-> A bare minimum custom element starter-kit using [Polymer](http://www.polymer-project.org/).
->
-> Like [Yeoman](http://yeoman.io/)? Use the [generator-element](https://www.npmjs.org/package/generator-element) instead.
->
-> Looking for a working example? Check [hello-world-polymer](https://github.com/webcomponents/hello-world-polymer).
+An issue has been submited about this. Track it [here](https://github.com/npm/marky-markdown/issues/46)
 
-## Demo
+#Polymer-Markdown-Tag
+Polymer element for displaying Github style markdown
 
-[Check it live!](http://Noah-Huppert.github.io/Polymer-Markdown-Tag)
+#Features
+- Uses NPM's [Marky-Markdown](https://github.com/npm/marky-markdown)
+	- Parses markdown
+	- Sanatizes HTML
+	- Applies syntax highlighting
+	- Converts headings(`h1`, `h2`, `h3`, ...) to anchor hyperlinks
 
-## Install
+#Installing
+Install Polymer-Markdown-Tag via NPM with:
 
-Install the component using [Bower](http://bower.io/):
-
-```sh
-$ bower install polymer-markdown-tag --save
+```
+npm install polymer-markdown-tag --save
 ```
 
-Or [download as ZIP](https://github.com/Noah-Huppert/polymer-markdown-tag/archive/master.zip).
+#Building From Source
+Clone from github
 
-## Usage
+```
+git clone git@github.com:Noah-Huppert/Polymer-Markdown-Tag.git
+```
 
-1. Import Web Components' polyfill:
+Install NPM dependencies
 
-    ```html
-    <script src="bower_components/webcomponentsjs/webcomponents.min.js"></script>
-    ```
+```
+npm install
+```
 
-2. Import Custom Element:
+Build with Grunt
 
-    ```html
-    <link rel="import" href="bower_components/polymer-markdown-tag/dist/polymer-markdown-tag.html">
-    ```
+```
+grunt
+```
 
-3. Start using it!
+#Usage
+Import Polymer-Markdown-Tag
 
-    ```html
-    <mark-down>
-      #Instructions
-      **Put your raw markdown here**
+html
+```
+<link rel="import" href="node_modules/polymer-markdown-tag/dist/polymer-markdown-tag.html">
+```
 
-      The `<mark-down />` tag will take care of turning it into markdown.
-    </mark-down>
-    ```
+Use the `<mark-down />` tag. Set the `src` attribute of the `<mark-down />` tag to the raw markdown you want processed.  
 
-## Options
-Attribute     | Options     | Default      | Description
----           | ---         | ---          | ---
-`src`         | *string*    | `""`         | The raw markdown to parse.
+**Example**:
 
-## Methods
+html
+```
+<mark-down src="**bold** and *italics*"></mark-down>
+```
 
-Method        | Parameters   | Returns     | Description
----           | ---          | ---         | ---
-`update()`    | None.        | Nothing.    | Compiles and displays markdown.
+would turn into:
+**bold** and *italics*
 
-## Events
+**Data binding Exmaple:**  
+
+html
+```
+<template is="auto-bindind">
+	<textarea value="{{RawMarkdown}}"></textarea>
+
+	<mark-down src="{{RawMarkdown}}"></mark-down>
+</template>
+```
+
+When you change the text in the `textarea` the content will be transformed into markdown.
+
+#Documentation
+##Attributes
+| Name | Type     | Description                 |
+| ---- | -------- | --------------------------- |
+| src  | `String` | The raw markdown to compile |
+
+##Methods
+| Name   | Returns | Description                                    |
+| ------ | ------- | ---------------------------------------------- |
+| update | `None`  | Recompiles the contents of the `src` attribute |
+
+##Properties
 None
 
-## Development
-
-In order to run it locally you'll need to fetch some dependencies and a basic server setup.
-
-* Install [Bower](http://bower.io/) & [Grunt](http://gruntjs.com/):
-
-    ```sh
-    $ [sudo] npm install -g bower grunt-cli
-    ```
-
-* Install local dependencies:
-
-    ```sh
-    $ bower install && npm install
-    ```
-
-* To test your project, start the development server and open `http://localhost:8000`.
-
-    ```sh
-    $ grunt server
-    ```
-
-* To build the distribution files before releasing a new version.
-
-    ```sh
-    $ grunt build
-    ```
-
-* To provide a live demo, send everything to `gh-pages` branch.
-
-    ```sh
-    $ grunt deploy
-    ```
-
-## Contributing
-
-1. Fork it!
-2. Create your feature branch: `git checkout -b my-new-feature`
-3. Commit your changes: `git commit -m 'Add some feature'`
-4. Push to the branch: `git push origin my-new-feature`
-5. Submit a pull request :D
-
-## History
-
-For detailed changelog, check [Releases](https://github.com/Noah-Huppert/polymer-markdown-tag/releases).
-
-## License
-
-[MIT License](http://opensource.org/licenses/MIT)
+##Events
+None

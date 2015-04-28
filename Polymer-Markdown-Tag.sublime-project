@@ -4,19 +4,14 @@
 		{
 			"file_exclude_patterns":
 			[
+				"npm-debug.log"
 			],
 			"folder_exclude_patterns":
 			[
-				"node_modules/"
+				"node_modules",
+				"dist"
 			],
 			"path": "."
-		}
-	],
-	"build_systems":
-	[
-		{
-			"name": "Grunt",
-			"shell_cmd": "grunt build"
 		}
 	]
 }

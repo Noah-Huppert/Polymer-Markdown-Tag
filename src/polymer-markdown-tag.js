@@ -1,28 +1,22 @@
+var marky = require("marky-markdown");
+
 var options = {
-  src: "",
-  update: function(){
-    if(this.src === undefined || this.src === null){
-      throw "Src cannot be undefined";
-    }
+	src: "",
+	update: function(){
+		if(this.src == undefined){
+			throw "<mark-down /> cannot have undefined \"src\" attribute";
+		}
 
-    if(this.innerHTML !== undefined){
-      var srcValue = this.src;
-      this.innerHTML = marked(srcValue);
-    }
-  },
-  ready: function(){
-    this.update();
-  },
-  srcChanged: function() {
-    this.update();
-  }
+		if(this.innerHTML !== undefined){
+			this.innerHTML = marky(this.src).html();
+		}
+	},
+	ready: function(){
+		this.update();
+	},
+	srcChanged: function(){
+		this.update();
+	}
 };
-
-marked.setOptions({
-  highlight: function (code) {
-    console.log("Highlighting \"" + code + "\"");
-    return hljs.highlightAuto(code).value;
-  }
-});
 
 Polymer("mark-down", options);

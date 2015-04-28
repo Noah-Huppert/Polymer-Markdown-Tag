@@ -8,10 +8,10 @@
 	"buffers":
 	[
 		{
-			"file": "Gruntfile.js",
+			"file": "package.json",
 			"settings":
 			{
-				"buffer_size": 1384,
+				"buffer_size": 658,
 				"line_ending": "Unix"
 			}
 		}
@@ -23,30 +23,10 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 180.0,
-		"last_filter": "build",
+		"height": 368.0,
+		"last_filter": "color",
 		"selected_items":
 		[
-			[
-				"build",
-				"Build: New Build System"
-			],
-			[
-				"remove",
-				"Package Control: Remove Package"
-			],
-			[
-				"bower",
-				"Bower: Install"
-			],
-			[
-				"inst",
-				"Package Control: Install Package"
-			],
-			[
-				"npm",
-				"npm: Install Package"
-			],
 			[
 				"color",
 				"Colorsublime: Install Theme"
@@ -56,12 +36,20 @@
 				"Package Control: Install Package"
 			],
 			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
 				"Package Control: remove",
 				"Package Control: Remove Package"
 			],
 			[
 				"instal",
 				"Package Control: Install Package"
+			],
+			[
+				"build",
+				"Build: Cancel"
 			],
 			[
 				"sass",
@@ -116,6 +104,10 @@
 				"Git: Status"
 			],
 			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
 				"insta",
 				"Package Control: Install Package"
 			],
@@ -164,8 +156,8 @@
 	],
 	"file_history":
 	[
-		"/C/Users/noahh_000/Noah/Programing/Polymer/Polymer-Markdown-Tag/Polymer-Markdown-Tag.sublime-project",
-		"/C/Users/noahh_000/Noah/Programing/Polymer/Polymer-Markdown-Tag/.gitignore",
+		"/C/Users/noahh_000/Noah/Programing/Polymer/Polymer-Markdown-Tag/package.json",
+		"/C/Users/noahh_000/.npmrc",
 		"/C/Users/noahh_000/Noah/Programing/NoahHuppert.com/SiteV2/src/server/server.js",
 		"/C/Users/noahh_000/Noah/Programing/NoahHuppert.com/SiteV2/.gitignore",
 		"/C/Users/noahh_000/Noah/Programing/NoahHuppert.com/SiteV2/NoahHuppert.com",
@@ -238,25 +230,25 @@
 			[
 				{
 					"buffer": 0,
-					"file": "Gruntfile.js",
+					"file": "package.json",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1384,
+						"buffer_size": 658,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								384,
+								384
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
+							"syntax": "Packages/JavaScript/JSON.tmLanguage",
+							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
@@ -275,7 +267,7 @@
 	},
 	"input":
 	{
-		"height": 55.0
+		"height": 0.0
 	},
 	"layout":
 	{
@@ -311,10 +303,6 @@
 	"output.git":
 	{
 		"height": 98.0
-	},
-	"output.textarea":
-	{
-		"height": 122.0
 	},
 	"pinned_build_system": "",
 	"project": "Polymer-Markdown-Tag.sublime-project",
