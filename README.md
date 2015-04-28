@@ -44,8 +44,7 @@ grunt
 #Usage
 Import Polymer-Markdown-Tag
 
-html
-```
+```html
 <link rel="import" href="node_modules/polymer-markdown-tag/dist/polymer-markdown-tag.html">
 ```
 
@@ -53,8 +52,7 @@ Use the `<mark-down />` tag. Set the `src` attribute of the `<mark-down />` tag 
 
 **Example**:
 
-html
-```
+```html
 <mark-down src="**bold** and *italics*"></mark-down>
 ```
 
@@ -63,8 +61,7 @@ would turn into:
 
 **Data binding Exmaple:**  
 
-html
-```
+```html
 <template is="auto-bindind">
 	<textarea value="{{RawMarkdown}}"></textarea>
 
